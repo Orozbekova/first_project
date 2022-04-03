@@ -1,4 +1,4 @@
-from django.shortcuts import render
+# from django.shortcuts import render
 
 # Create your views here.
 
@@ -13,6 +13,7 @@ class PostListView(ListAPIView):
     serializer_class = PostSerializer
 
 class PostCreateView(CreateAPIView):
+    queryset = Post.objects.all()
     serializer_class = PostSerializer
 
 
